@@ -4,6 +4,15 @@
   </div>
 </template>
 
+
+<script>
+  /*import pageHeader from '~/components/layout/pageHeader.vue'
+  export default {
+    components: {
+      pageHeader
+    }
+  }*/
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

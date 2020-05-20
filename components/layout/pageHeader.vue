@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="logo">
-      <img src="~assets/image/common/logo.svg" alt="">
+      로고
     </div>
     <ul class="nav">
       <li><a href="#"><span>워터플래닛</span></a></li>
@@ -13,15 +13,7 @@
   </div>
 </template>
 
-<script>
-import pageHeader from '~/components/layout/pageHeader.vue'
 
-export default {
-  components: {
-    pageHeader
-  }
-}
-</script>
 <style lang="scss" scoped>
 
 </style>

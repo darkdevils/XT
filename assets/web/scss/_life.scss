@@ -1,8 +1,195 @@
+@import "mixins";
+:root {
+  --animate-delay: 0s;
+}
 
+/* All delay classes will take half the time to start */
+:root {
+  --animate-delay: 0.5s;
+}
 
 .life {
   background: #00C691;
   &__content {
-    height: 100vh;
+
+    .yellowBox {
+      background: #FFE232;
+      &--rightTop {
+        position: absolute;
+        top: 0;
+        right: 128px;
+        width: 230px;
+        height: 600px;
+        .mask {
+          position: absolute;
+          right: -20px;
+          bottom: 53px;
+        }
+      }
+    }
+    .textBig {
+      position: absolute;
+      .big {
+        display: inline-block;
+        font-size: 200px;
+        font-weight: 700;
+        color: #FFE232;
+      }
+      .textSmall {
+        color: #fff;
+        font-size: 20px;
+      }
+      @include transition(1s ease);
+      &__s {
+        left: 677px;
+        top: 150px;
+        .textSmall {
+          position: absolute;
+          left: 92px;
+          bottom: 60px;
+        }
+      }
+      &__p {
+        left: 1060px;
+        top: 250px;
+        .big {
+          @include rotate(90deg);
+        }
+        .textSmall {
+          position: absolute;
+          top: 60px;
+          left: 47px;
+        }
+      }
+      &__x {
+        left: 851px;
+        top: 345px;
+        .textSmall {
+          position: absolute;
+          left: 112px;
+          bottom: 50px;
+        }
+      }
+    }
+
+    .videoPhoto {
+      position: relative;
+      padding: 605px 0 0;
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      &__content {
+        float: left;
+        width: 733px;
+      }
+      &__text {
+        float:right;
+        padding: 230px 128px 0 0;
+        font-size: 40px;
+        text-align: right;
+        color: #fff;
+        line-height: 1.8em;
+      }
+
+      &__content {
+        position: relative;
+        .videoPhoto__animateBox {
+          position: absolute;
+          left: 0;
+          top: 203px;
+          width: 706px;
+          height: 312px;
+          background: #C7CBD9;
+          opacity: 0.65;
+          z-index: 3;
+        }
+        .yellowBox {
+          position: absolute;
+          left: 706px;
+          top: 203px;
+          width: 26px;
+          height: 312px;
+          background: #FFE232;
+        }
+      }
+    }
+
+    .xtlogo {
+      position: relative;
+      height: 395px;
+      padding: 163px 0 0 408px;
+      .yellowBox {
+        position: absolute;
+        left: 706px;
+        top: -3px;
+        background: #FFE232;
+        width: 102px;
+        height: 398px;
+      }
+      .logoImg {
+        position: relative;
+        z-index: 2;
+      }
+      .textMask {
+        position: absolute;
+        right: 160px;
+        bottom: 50px;
+        font-size: 50px;
+        color: #FFE232;
+      }
+    }
+
+    .swiperArea {
+      .border {
+        position: relative;
+        width:980px;
+        height: 480px;
+        margin: 0 auto 30px;
+        border: 10px solid #fff;
+        &:before,&:after {
+          content: "";
+          width: 0%;
+          height: 0%;
+          position: absolute;
+          visibility: hidden;
+        }
+        &:before {
+          border-top: 10px solid #fff;
+          border-right: 10px solid #fff;
+          -webkit-transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+          transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+          top: 0;
+          left: 0;
+        }
+        &:after {
+          border-left: 10px solid #fff;
+          border-bottom: 10px solid #fff;
+          bottom: 0;
+          right: 0;
+          -webkit-transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+          transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+        }
+        &:hover {
+          -webkit-animation: pulse 1s ease-out 0.4s;
+          animation: pulse 1s ease-out 0.4s;
+          color: #0395E5;
+        }
+        &:hover:before,&:hover:after {
+          width: 100%;
+          height: 100%;
+          visibility: visible;
+        }
+        &:hover:before {
+          -webkit-transition: width 0.1s ease, height 0.1s ease 0.1s;
+          transition: width 0.1s ease, height 0.1s ease 0.1s;
+        }
+        &:hover:after {
+          -webkit-transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+          transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+        }
+      }
+    }
   }
 }
