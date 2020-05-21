@@ -185,6 +185,7 @@
 </template>
 
 <script>
+
   export default {
     head() {
       return {
@@ -213,6 +214,7 @@
         $(".swiper-slide, .swiper-pagination").css("width", $(window).width());
       });
       $(".swiper-pagination").css("width", "40px");
+
     }
     /*methods: {
 

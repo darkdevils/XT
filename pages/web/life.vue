@@ -60,12 +60,12 @@
 
         <!-- 동영상 및 사진 -->
         <div class="videoPhoto">
-          <div class="videoPhoto__content">
-            <div class="video-image"><img src="~assets/web/images/temp/photo.png" alt=""></div>
+          <div class="videoPhoto__content" data-aos="fade-up">
+            <div class="video-image" data-aos="fade-up"><img src="~assets/web/images/temp/photo.png" alt=""></div>
             <div class="videoPhoto__animateBox"></div>
             <div class="yellowBox"></div>
           </div>
-          <div class="videoPhoto__text">
+          <div class="videoPhoto__text" data-aos="fade-right">
             우리는 즐거워서 오래 다니고 싶은 회사를 지향합니다<br>
             다양한 우리들이 만나 즐겁고 또 각자가 따로 있어 즐겁고<br>
             그렇게 우리는 함께 또 따로 즐거운<br>
@@ -77,13 +77,13 @@
         <!-- 로고 -->
         <div class="xtlogo">
           <div class="yellowBox"></div>
-          <div class="logoImg"><img src="~assets/web/images/life/xtlogo.svg" alt=""></div>
+          <div class="logoImg" data-aos="fade-up"><img src="~assets/web/images/life/xtlogo.svg" alt=""></div>
           <div class="textMask">따로<br>도 같이</div>
         </div>
         <!-- //로고 -->
 
-        <div class="swiperArea">
-          <div class="border"></div>
+        <div class="swiperArea" style="padding: 0 0 50px">
+          <div class="border" data-aos="fade-up"></div>
           <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -111,13 +111,19 @@
 </template>
 
 <script>
+
+
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+  import Swiper from 'swiper';
+
     export default {
       name: "life",
         head() {
         return {
           script : [
-            {src: "/js/jquery.pagepiling.js"},
-            {src: "/js/swiper.js"},
+            /*{src: "/js/jquery.pagepiling.js"},
+            {src: "/js/swiper.js"},*/
             {src: "/js/common.js"}
           ]
         }
@@ -127,11 +133,16 @@
           speed: 400,
           spaceBetween: 100
         });
+        //$('.life__content').pagepiling();
+        AOS.init({
+          duration: 1200,
+          offset: 10,
+        });
       }
     }
 </script>
 
 <style>
-html,body {overflow: auto;}
+html,body {overflow: initial;}
 
 </style>

@@ -1,12 +1,5 @@
 @import "mixins";
-:root {
-  --animate-delay: 0s;
-}
 
-/* All delay classes will take half the time to start */
-:root {
-  --animate-delay: 0.5s;
-}
 
 .life {
   background: #00C691;
@@ -33,8 +26,8 @@
         display: inline-block;
         font-size: 200px;
         font-weight: 700;
-        color: #FFE232;
-      }
+      color: #FFE232;
+    }
       .textSmall {
         color: #fff;
         font-size: 20px;
