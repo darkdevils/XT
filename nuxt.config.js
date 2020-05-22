@@ -26,7 +26,7 @@ export default {
   ** Global CSS
   */
   css: [
-   '~assets/web/scss/style.scss'
+    {src: '~assets/web/scss/style.scss'}
   ],
   /*
   ** Plugins to load before mounting the App

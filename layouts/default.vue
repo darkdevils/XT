@@ -1,9 +1,22 @@
 <template>
-  <div>
+  <div class="wrapper">
+    <pageHeader/>
     <nuxt />
+    <pageFooter/>
   </div>
 </template>
 
+<script>
+  import pageHeader from '~/components/layout/pageHeader.vue'
+  import pageFooter from '~/components/layout/pageFooter.vue'
+
+  export default {
+    components: {
+      pageHeader,
+      pageFooter
+    }
+  }
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
