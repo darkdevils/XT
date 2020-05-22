@@ -82,30 +82,80 @@
         </div>
         <!-- //로고 -->
 
-        <div class="swiperArea" style="padding: 0 0 50px">
-          <div class="border" data-aos="fade-up"></div>
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
+        <div class="swiperArea">
+          <div class="border" data-aos="fade-up" data-aos-offset="500">
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper" data-aos="fade" data-aos-delay="500">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="~assets/web/images/temp/img01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="~assets/web/images/temp/img01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="~assets/web/images/temp/img01.jpg" alt=""></div>
+              </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <div class="swiper-pagination" data-aos="fade" data-aos-delay="500"></div>
           </div>
         </div>
-      </div>
 
+        <div class="xtText">
+          <strong class="bigText">
+            <span>엑스트</span><br>
+            <span>워라벨</span>
+          </strong>
+          <div class="text" data-aos="fade-up">
+            <span>우리의 저녁이 있는 삶을 위해</span><br>
+            <span>8시부터 10시 탄력 출근과 하루 7시간 근무로</span><br>
+            <span>집중해서 일하고 한시간 일찍 퇴근할 수 있는</span><br>
+            <span>엑스티만의 문화를 만들고 있습니다.</span>
+          </div>
+        </div>
+
+        <div class="xtMember">
+          <div class="xtMember__team textRight">
+            <span class="name">김현수 대표</span><strong>CEO</strong>
+            <span class="name">송의택 이사</span><strong>CTO</strong>
+          </div>
+          <div class="xtMember__team textLeft planner">
+            <strong>PLANNER</strong>
+            <span class="xtMember__team__memberList">
+              <span>윤성배 팀장</span>
+              <span>최성민 대리</span>
+              <span>황수현 사원</span>
+            </span>
+          </div>
+          <div class="xtMember__team textRight designer">
+            <span class="xtMember__team__memberList">
+              <span>우광수 실장</span>
+              <span>정종운 차창</span>
+              <span>최홍 사원</span>
+              <span>성혜연 사원</span>
+            </span>
+            <strong>DESIGNER</strong>
+          </div>
+          <div class="xtMember__team textLeft publisher">
+            <strong>PUBLISHER</strong>
+            <span class="xtMember__team__memberList">
+              <span>김정환 차장</span>
+              <span>신민정 과장</span>
+            </span>
+          </div>
+          <div class="xtMember__team textRight develover">
+            <span class="xtMember__team__memberList list1">
+              <span>홍원기 차장</span>
+              <span>강인호 과장</span>
+              <span>김종인 대리</span>
+              <span>최광일 대리</span>
+            </span>
+            <span class="xtMember__team__memberList list2">
+              <span>고세진 대리</span>
+              <span>정대원 대리</span>
+              <span>이건희 사원</span>
+            </span>
+            <strong>DEVELOVER</strong>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
@@ -122,22 +172,28 @@
         head() {
         return {
           script : [
-            /*{src: "/js/jquery.pagepiling.js"},
-            {src: "/js/swiper.js"},*/
             {src: "/js/common.js"}
           ]
         }
       },
       mounted() {
-        var mySwiper = new Swiper('.swiper-container', {
-          speed: 400,
-          spaceBetween: 100
-        });
         //$('.life__content').pagepiling();
         AOS.init({
           duration: 1200,
-          offset: 10,
+          offset: 120,
         });
+        var mySwiper = new Swiper('.swiper-container', {
+          speed: 1000,
+          spaceBetween: 0,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          }
+        });
+
       }
     }
 </script>

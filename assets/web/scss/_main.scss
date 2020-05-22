@@ -326,12 +326,12 @@
           &.active {
             .bar-txt {
               &:before {
-                right: 0;
-                width: 0;
-                -webkit-transition: width 1.1s ease-in-out;
-                transition: width 1.1s ease-in-out;
-                transition-delay: 0.5s;
-              }
+                 right: 0;
+                 width: 0;
+                 -webkit-transition: width 1.1s ease-in-out;
+                 transition: width 1.1s ease-in-out;
+                 transition-delay: 0.5s;
+               }
               &:after {
                 -webkit-animation: typo01-after 1s ease-in-out;
                 animation-delay: 0.5s;
