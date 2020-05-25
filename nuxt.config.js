@@ -1,4 +1,6 @@
 
+import webpack from "webpack";
+
 export default {
   mode: 'universal',
   /*
@@ -12,6 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     script : [
+
       {src: "https://code.jquery.com/jquery-3.5.1.min.js"}
     ],
     link: [
@@ -32,6 +35,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: "~plugins/plugins.js", mode: "client", ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
