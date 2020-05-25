@@ -2,7 +2,7 @@
   <div class="header main">
     <div class="skip-navi">
       <a href="#container">본문 바로가기</a>
-      <a href="#gnb">메뉴 바로가기</a>
+      <a href="#gnb">메뉴 바로가기 test</a>
     </div>
     <header class="w-txt">
       <div class="xt-ci">
