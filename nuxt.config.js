@@ -14,7 +14,6 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     script : [
-
       {src: "https://code.jquery.com/jquery-3.5.1.min.js"}
     ],
     link: [
@@ -57,9 +56,30 @@ export default {
   ** Build configuration
   */
   build: {
+    module: {
+      resolve: {
+        alias: {
+          jquery$: "jquery"
+        }
+      },
+      rules: [
+        {
+          test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+          loader: "file-loader?name=[name].[ext]?[hash]"
+        }
+      ]
+    },
     /*
     ** You can extend webpack config here
     */
+    plugins: [
+      new webpack.ProvidePlugin({
+        Vue: ["vue/dist/vue.esm.js", "default"],
+        jQuery: "jquery",
+        $: "jquery",
+        "window.jQuery": "jquery"
+      })
+    ],
     extend (config, ctx) {
     }
   }
