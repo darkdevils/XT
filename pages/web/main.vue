@@ -139,6 +139,9 @@
 </template>
 
 <script>
+
+  import Swiper from 'swiper'
+  
   export default {
     head() {
       return {

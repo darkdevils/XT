@@ -77,112 +77,9 @@
               text-align: center;
               font-size: 18px;
               background: #000;
-              .weAre-txt {
-                position: relative;
-                height: 100%;
-                h2 {
-                  position: absolute;
-                  top: 32%;
-                  padding-left: 125px;
-                  display: block;
-                  color: #fff;
-                  font-size: 120px;
-                  font-weight: 500;
-                  text-align: left;
-                  line-height: 1;
-                  span {
-                    position: relative;
-                    display: inline-block;
-                    color: #fff;
-                    font-size: 60px;
-                    font-weight: 400;
-                    vertical-align: top;
-                    padding: 15px 0;
-                    border-bottom: 3px solid #fff;
-                    &:after {
-                      content: "";
-                      display: block;
-                      width: 0;
-                      height: 3px;
-                      position: absolute;
-                      bottom: -3px;
-                      left: 0;
-                    }
-                  }
-                }
-                div {
-                  position: absolute;
-                  top: 62%;
-                  padding-left: 300px;
-                  display: block;
-                  color: #fff;
-                  text-align: left;
-                  line-height: 2;
-                }
-              }
 
-              &.we-are01 {
-                .weAre-txt {
-                  background: url("../images/main/bg-we01.png") no-repeat right bottom;
-
-                  span {
-                    &:after {
-                      background: #2e3bee;
-                    }
-                  }
-                }
-              }
-
-              &.we-are02 {
-                .weAre-txt {
-                  background: url("../images/main/bg-we02.png") no-repeat right bottom;
-
-                  span {
-                    &:after {
-                      background: #00c691;
-                    }
-                  }
-                }
-              }
-
-              &.we-are03 {
-                .weAre-txt {
-                  background: url("../images/main/bg-we01.png") no-repeat right bottom;
-
-                  span {
-                    &:after {
-                      background: #00c691;
-                    }
-                  }
-                }
-              }
-
-              &.we-are04 {
-                .weAre-txt {
-                  background: url("../images/main/bg-we02.png") no-repeat right bottom;
-
-                  span {
-                    &:after {
-                      background: #00c691;
-                    }
-                  }
-                }
-              }
-
-              &.we-are05 {
-                .weAre-txt {
-                  background: url("../images/main/bg-we01.png") no-repeat right bottom;
-
-                  span {
-                    &:after {
-                      background: #00c691;
-                    }
-                  }
-                }
-              }
             }
           }
-
           .swiper-pagination {
             left: 125px;
             bottom: 90px;
@@ -206,7 +103,116 @@
               }
             }
           }
+
+
+
         }
+
+
+        .weAre-txt {
+          position: relative;
+          height: 100%;
+          h2 {
+            position: absolute;
+            top: 32%;
+            padding-left: 125px;
+            display: block;
+            color: #fff;
+            font-size: 120px;
+            font-weight: 500;
+            text-align: left;
+            line-height: 1;
+            span {
+              position: relative;
+              display: inline-block;
+              color: #fff;
+              font-size: 60px;
+              font-weight: 400;
+              vertical-align: top;
+              padding: 15px 0;
+              border-bottom: 3px solid #fff;
+              &:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 3px;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+              }
+            }
+          }
+          div {
+            position: absolute;
+            top: 62%;
+            padding-left: 300px;
+            display: block;
+            color: #fff;
+            text-align: left;
+            line-height: 2;
+          }
+        }
+
+        &.we-are01 {
+          .weAre-txt {
+            background: url("../images/main/bg-we01.png") no-repeat right bottom;
+
+            span {
+              &:after {
+                background: #2e3bee;
+              }
+            }
+          }
+        }
+
+        &.we-are02 {
+          .weAre-txt {
+            background: url("../images/main/bg-we02.png") no-repeat right bottom;
+
+            span {
+              &:after {
+                background: #00c691;
+              }
+            }
+          }
+        }
+
+        &.we-are03 {
+          .weAre-txt {
+            background: url("../images/main/bg-we01.png") no-repeat right bottom;
+
+            span {
+              &:after {
+                background: #00c691;
+              }
+            }
+          }
+        }
+
+        &.we-are04 {
+          .weAre-txt {
+            background: url("../images/main/bg-we02.png") no-repeat right bottom;
+
+            span {
+              &:after {
+                background: #00c691;
+              }
+            }
+          }
+        }
+
+        &.we-are05 {
+          .weAre-txt {
+            background: url("../images/main/bg-we01.png") no-repeat right bottom;
+
+            span {
+              &:after {
+                background: #00c691;
+              }
+            }
+          }
+        }
+
         &.active {
           .swiper-wrapper {
             .swiper-slide-active {

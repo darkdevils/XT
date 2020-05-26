@@ -34,7 +34,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: "~plugins/plugins.js", mode: "client", ssr: false }
+    { src: "~plugins/plugins.js", mode: "client", ssr: false },
+    { src: "~static/js/jquery.pagepiling.js", mode: "client", ssr: false },
+    { src: "~static/js/fullpage.js", mode: "client", ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
