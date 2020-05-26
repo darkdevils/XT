@@ -144,7 +144,6 @@
       return {
         script : [
           {src: "/js/jquery.pagepiling.js"},
-          {src: "/js/swiper.js"},
           {src: "/js/common.js"},
           {src: "/js/aos.js"},
           {src: "/js/jquery.mCustomScrollbar.concat.min.js"}
@@ -158,8 +157,10 @@
       var swiper = new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
-          type: 'fraction',
+          type: 'fraction'
         },
+        /*direction: "horizontal",
+        mousewheel: true*/
       });
       $(window).resize(function () {
         $(".swiper-slide").css("width", $(window).width());
@@ -168,6 +169,7 @@
         theme: "minimal-dark",
         scrollInertia:100
       });
+
 
 
 
